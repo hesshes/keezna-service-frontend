@@ -1,13 +1,17 @@
 {
     "compilerOptions": {
-        "target": "ESNext",
-        "module": "ESNext",
-        "jsx": "react-jsx",
-        "strict": true,
-        "moduleResolution": "node",
-        "esModuleInterop": true,
-        "skipLibCheck": true,
-        "forceConsistentCasingInFileNames": true
+        "target": "ESNext", // 최신 JS 문법
+        "module": "ESNext", // ES Module 방식
+        "jsx": "react-jsx", // React 17+ JSX 변환
+        "strict": true, // 엄격한 타입 검사
+        "moduleResolution": "node", // Node 스타일 모듈 해석
+        "esModuleInterop": true, // CommonJS 모듈도 import 가능
+        "skipLibCheck": true, // .d.ts 타입 검사 생략
+        "forceConsistentCasingInFileNames": true, // 대소문자 불일치 방지
+        "allowSyntheticDefaultImports": true, // default import 허용
+        "isolatedModules": true, // Vite/HMR 호환성
+        "noEmit": true // 빌드시 JS 출력 안 함 (Vite가 처리)
     },
-    "include": ["src"]
+    "include": ["src/**/*.ts", "src/**/*.tsx", "src/main.tsx"], // ts, tsx 모두 포함
+    "exclude": ["node_modules"] // node_modules 제외
 }
