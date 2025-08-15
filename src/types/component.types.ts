@@ -1,5 +1,9 @@
 import { ReactNode } from "react";
 
 export interface MainLayoutProps {
-    children: ReactNode;
+    children?: ReactNode;
+}
+
+export interface TopNavProps{
+    children?: ReactNode;
 }
