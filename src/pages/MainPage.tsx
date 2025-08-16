@@ -1,4 +1,3 @@
-import { JSX } from "react";
 import MainLayout from "../layouts/MainLayout";
 
 function MainPage(): JSX.Element {

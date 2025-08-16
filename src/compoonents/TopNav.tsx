@@ -1,6 +1,7 @@
+import { Link } from "react-router-dom";
 import "../assets/css/topnav.scss";
 import { TopNavProps } from "../types/component.types";
-import { JSX, useRef, useState } from "react";
+import { useRef, useState } from "react";
 
 function TopNav({ children }: TopNavProps): JSX.Element {
     const [isExpanded, setIsExpended] = useState(false);
@@ -28,12 +29,14 @@ function TopNav({ children }: TopNavProps): JSX.Element {
                                 <a href="#site">site</a>
                             </li>
                             <li>
-                                <a href="#login">login</a>
+                                <Link to={"/member/join"}>join</Link>
                             </li>
                         </ul>
                     </nav>
                     <div
-                        className={`header__nav__mobile${isExpanded ? " active" : ""}`}
+                        className={`header__nav__mobile${
+                            isExpanded ? " active" : ""
+                        }`}
                         id="headerToggle"
                         aria-controls="primary-menu"
                         aria-expanded={isExpanded}

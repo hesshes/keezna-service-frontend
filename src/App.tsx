@@ -1,12 +1,13 @@
 import "./App.css";
-import { RouterProvider } from "react-router-dom";
-import root from "./router/root";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import rootRouter from "./router/rootRouter";
 import { JSX } from "react";
 
+const router = createBrowserRouter(rootRouter);
 function App(): JSX.Element {
     return (
         <RouterProvider
-            router={root}
+            router={router}
             future={{ v7_startTransition: true, v7_relativeSplatPath: true }}
         />
     );
