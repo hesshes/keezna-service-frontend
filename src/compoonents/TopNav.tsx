@@ -25,24 +25,15 @@ function TopNav({ children }: TopNavProps): JSX.Element {
                     >
                         <ul>
                             <li>
-                                <a href="#intro">intro</a>
-                            </li>
-                            <li>
-                                <a href="#skill">skill</a>
-                            </li>
-                            <li>
                                 <a href="#site">site</a>
                             </li>
                             <li>
-                                <a href="#port">portfolio</a>
-                            </li>
-                            <li>
-                                <a href="#contact">contact</a>
+                                <a href="#login">login</a>
                             </li>
                         </ul>
                     </nav>
                     <div
-                        className="header__nav__mobile"
+                        className={`header__nav__mobile${isExpanded ? " active" : ""}`}
                         id="headerToggle"
                         aria-controls="primary-menu"
                         aria-expanded={isExpanded}
