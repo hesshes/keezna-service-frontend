@@ -1,7 +1,14 @@
+import "../assets/css/topnav.scss";
 import { TopNavProps } from "../types/component.types";
-import { JSX } from "react";
+import { JSX, useRef, useState } from "react";
 
 function TopNav({ children }: TopNavProps): JSX.Element {
+    const [isExpanded, setIsExpended] = useState(false);
+    const navRef = useRef<HTMLDivElement>(null);
+    const toggleMenu = () => {
+        setIsExpended((b) => !b);
+    };
+
     return (
         <>
             <header id="header" role="banner">
@@ -12,7 +19,7 @@ function TopNav({ children }: TopNavProps): JSX.Element {
                         </a>
                     </div>
                     <nav
-                        className="header__nav"
+                        className={`header__nav${isExpanded ? " show" : ""}`}
                         role="navigation"
                         aria-label="메인 메뉴"
                     >
@@ -38,9 +45,10 @@ function TopNav({ children }: TopNavProps): JSX.Element {
                         className="header__nav__mobile"
                         id="headerToggle"
                         aria-controls="primary-menu"
-                        aria-expanded="false"
+                        aria-expanded={isExpanded}
                         role="button"
                         tabIndex={0}
+                        onClick={toggleMenu}
                     >
                         <span></span>
                     </div>
