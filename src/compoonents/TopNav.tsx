@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import "../assets/css/topnav.scss";
+import "../assets/css/comp/topnav.scss";
 import { TopNavProps } from "../types/component.types";
 import { useState } from "react";
 

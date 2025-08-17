@@ -1,8 +1,7 @@
-import "../../assets/css/member.scss";
+import "../../assets/css/comp/member.scss";
 const Member = (): JSX.Element => {
     return (
-        <>
-            <h2>Weekly Coding Challenge #1: Sign in/up Form</h2>
+        <div id="member__wrapper">
             <div className="container" id="container">
                 <div className="form-container sign-up-container">
                     <form action="#">
@@ -71,7 +70,7 @@ const Member = (): JSX.Element => {
                     </div>
                 </div>
             </div>
-        </>
+        </div>
     );
 };
 export default Member;

@@ -1,4 +1,4 @@
-import "../assets/css/intro.scss";
+import "../assets/css/comp/intro.scss";
 
 function Intro(): JSX.Element {
     return (
