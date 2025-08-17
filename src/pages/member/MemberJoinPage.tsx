@@ -1,9 +1,12 @@
-import MemberJoin from "../../compoonents/member/MemberJoin";
-import TopNav from "../../compoonents/TopNav";
+import Member from "../../compoonents/member/Member";
 import MainLayout from "../../layouts/MainLayout";
 
-const MemberJoinPage = (): JSX.Element => {
-    return <MainLayout></MainLayout>;
+const MemberPage = (): JSX.Element => {
+    return (
+        <MainLayout>
+            <Member />
+        </MainLayout>
+    );
 };
 
-export default MemberJoinPage;
+export default MemberPage;
