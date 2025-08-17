@@ -1,11 +1,12 @@
+import Intro from "../compoonents/Intro";
 import MainLayout from "../layouts/MainLayout";
 
-function MainPage(): JSX.Element {
+const MainPage = (): JSX.Element => {
     return (
         <MainLayout>
-            <h1>MainPage</h1>
+            <Intro />
         </MainLayout>
     );
-}
+};
 
 export default MainPage;

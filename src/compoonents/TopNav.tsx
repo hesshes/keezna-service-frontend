@@ -1,11 +1,10 @@
 import { Link } from "react-router-dom";
 import "../assets/css/topnav.scss";
 import { TopNavProps } from "../types/component.types";
-import { useRef, useState } from "react";
+import { useState } from "react";
 
-function TopNav({ children }: TopNavProps): JSX.Element {
+const TopNav = ({ children }: TopNavProps): JSX.Element => {
     const [isExpanded, setIsExpended] = useState(false);
-    const navRef = useRef<HTMLDivElement>(null);
     const toggleMenu = () => {
         setIsExpended((b) => !b);
     };
@@ -26,7 +25,7 @@ function TopNav({ children }: TopNavProps): JSX.Element {
                     >
                         <ul>
                             <li>
-                                <a href="#site">site</a>
+                                <Link to={"/"}>site</Link>
                             </li>
                             <li>
                                 <Link to={"/member/join"}>join</Link>
@@ -50,6 +49,6 @@ function TopNav({ children }: TopNavProps): JSX.Element {
             </header>
         </>
     );
-}
+};
 
 export default TopNav;
