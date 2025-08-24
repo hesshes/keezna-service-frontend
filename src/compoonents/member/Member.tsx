@@ -4,7 +4,7 @@ const Member = (): JSX.Element => {
         <div id="member__wrapper">
             <div className="container" id="container">
                 <div className="form-container sign-up-container">
-                    <form action="#">
+                    <div>
                         <h1>Create Account</h1>
                         <div className="social-container">
                             <a href="#" className="social">
@@ -22,10 +22,10 @@ const Member = (): JSX.Element => {
                         <input type="email" placeholder="Email" />
                         <input type="password" placeholder="Password" />
                         <button>Sign Up</button>
-                    </form>
+                    </div>
                 </div>
                 <div className="form-container sign-in-container">
-                    <form action="#">
+                    <div>
                         <h1>Sign in</h1>
                         <div className="social-container">
                             <a href="#" className="social">
@@ -43,7 +43,7 @@ const Member = (): JSX.Element => {
                         <input type="password" placeholder="Password" />
                         <a href="#">Forgot your password?</a>
                         <button>Sign In</button>
-                    </form>
+                    </div>
                 </div>
                 <div className="overlay-container">
                     <div className="overlay">

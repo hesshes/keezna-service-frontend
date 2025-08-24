@@ -1,0 +1,21 @@
+#image__wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* 가로 방향 중앙 정렬 */
+    align-items: center; /* 세로 방향 중앙 정렬 */
+    height: 100vh;
+    .custom-file-upload {
+        display: inline-block;
+        padding: 10px 16px;
+        background-color: #4caf50;
+        color: white;
+        font-weight: bold;
+        border-radius: 6px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+    .custom-file-upload:hover {
+        background-color: #45a049;
+    }
+}

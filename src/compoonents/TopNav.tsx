@@ -28,6 +28,9 @@ const TopNav = ({ children }: TopNavProps): JSX.Element => {
                                 <Link to={"/"}>site</Link>
                             </li>
                             <li>
+                                <Link to={"/image"}>image convert</Link>
+                            </li>
+                            <li>
                                 <Link to={"/member/join"}>join</Link>
                             </li>
                         </ul>
