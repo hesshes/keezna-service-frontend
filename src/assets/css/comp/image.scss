@@ -4,6 +4,15 @@
     justify-content: center; /* 가로 방향 중앙 정렬 */
     align-items: center; /* 세로 방향 중앙 정렬 */
     height: 100vh;
+    
+    .image__upload {
+        input {
+            display: none;
+        }
+        span {
+            margin-left: 20px;
+        }
+    }
     .custom-file-upload {
         display: inline-block;
         padding: 10px 16px;
