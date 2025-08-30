@@ -1,6 +1,11 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "../../assets/css/comp/image.scss";
+import { loadConfig } from "../../config";
 const Image = (): JSX.Element => {
+    const [apiUrl, setApiUrl] = useState("");
+    useEffect(() => {
+        loadConfig().then((cfg) => setApiUrl(cfg.API_URL));
+    }, []);
     const [file, setFile] = useState<File | null>(null);
 
     const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>): void => {
@@ -13,7 +18,6 @@ const Image = (): JSX.Element => {
     };
 
     const handleImageConvert = (): void => {
-        console.log("test");
     };
     return (
         <>
