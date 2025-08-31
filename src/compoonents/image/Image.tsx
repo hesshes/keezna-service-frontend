@@ -1,12 +1,10 @@
 import { useEffect, useState } from "react";
 import "../../assets/css/comp/image.scss";
-import { loadConfig } from "../../config";
+import { fetchImageConvert } from "../../api/imageApi";
+
 const Image = (): JSX.Element => {
-    const [apiUrl, setApiUrl] = useState("");
-    useEffect(() => {
-        loadConfig().then((cfg) => setApiUrl(cfg.API_URL));
-    }, []);
     const [file, setFile] = useState<File | null>(null);
+    const [convertImg, setConvertImg] = useState<File | null>(null);
 
     const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>): void => {
         const files = e.currentTarget.files;
@@ -17,8 +15,16 @@ const Image = (): JSX.Element => {
         }
     };
 
-    const handleImageConvert = (): void => {
+    const handleImageConvert = async (): Promise<void> => {
+        let formData = new FormData();
+        if (!file) {
+            alert("업로드 된 파일이 없습니다.");
+            return;
+        }
+        formData.append("image", file);
+        const resp = await fetchImageConvert(formData);
     };
+    
     return (
         <>
             <div id="image__wrapper">
