@@ -1,12 +1,10 @@
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
-import tailwindcss from "@tailwindcss/vite";
 
 // https://vite.dev/config/
 export default defineConfig({
     plugins: [
         react(), // JSX/TSX 변환 + Fast Refresh
-        tailwindcss(), // TailwindCSS 빌드/HMR
     ],
     server: {
         port: 5173, // 개발 서버 포트
